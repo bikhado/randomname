@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Name Picker</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+  
+    <link href="~/css/normalize.css" rel="stylesheet" />
+    <link href="~/css/foundation.css" rel="stylesheet" />
+
+    <script src="~/js/vendor/custom.modernizr.js"></script>
+    <script src="~/js/jquery-latest.min.js"></script>
+    <style>
+        #values {
+            position: relative;
+            font-size: 400%;
+            text-align: center;
+            margin: 0 auto;
+            z-index: 0;
+        }
+
+        .name {
+            overflow: hidden;
+            display: block;
+        }
+
+        #names {
+            display: none;
+            padding: 5px;
+        }
+
+        #namesbox {
+            min-height: 400px;
+            font-size: 32px;
+            color: #333;
+            resize: none;
+            border: 1px solid #F39C12;
+        }
+
+        .extra {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        #result1 {
+            background: #000;
+            color: #fbe34b;
+            padding: 20px;
+            z-index: 10;
+            margin-top: -150px;
+        }
+
+        body {
+            background: #F1C40F url(img/bg-noise-orange.png);
+        }
+
+        #varnote {
+            font-size: 40px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .copyright {
+            font-size: 11px;
+            font-family: Tahoma;
+            color: #9B59B6;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
